@@ -12,6 +12,8 @@ def filter_by_state(user_date: list, state: str = "EXECUTED") -> list:
 
 
 def sort_by_date(user_date: list, reverse_sort: bool = True) -> list:
-    # Используем get_date напрямую в sorted()
+    """Функция которая сортирует список словарей по дате. По умолчанию,
+    сортировка выполняется по убыванию.
+    """
     sorted_data = sorted(user_date, key=lambda x: x["date"], reverse=reverse_sort)
     return sorted_data
