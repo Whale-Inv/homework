@@ -1,7 +1,7 @@
 from typing import Callable
 
 import pytest
-from _pytest.raises import raises
+from pytest import raises
 
 from src.widget import get_date, mask_account_card
 
