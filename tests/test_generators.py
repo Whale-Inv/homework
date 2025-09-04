@@ -57,8 +57,9 @@ def test_card_number_generator(card_gen_result: list) -> None:
     gen = card_number_generator(9999999999999999, 9999999999999999)
     assert next(gen) == "9999 9999 9999 9999"
 
+
 @pytest.mark.parametrize('start, stop', [(1, '3'), ('1', 3), ('1', '3'), (1.5, 3), (1, None)])
-def test_card_number_generator_type_errors(start, stop) -> None:
+def test_card_number_generator_type_errors(start: int | str | float, stop: int | str | None) -> None:
     with pytest.raises(TypeError) as excinfo:
         list(card_number_generator(start, stop))
     assert str(excinfo.value) == "Номер карты может содержать только числовые значения"

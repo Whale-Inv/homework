@@ -11,9 +11,8 @@ def filter_by_currency(transactions: list, currency: str = "USD") -> list:
 
 def transaction_descriptions(transactions: list) -> Generator:
     """
-    Функция принимает на входе список транзакций и
-    возвращает итерируемый объект, который может генерировать значения по запросу,
-    выдавая описание транзакций
+    Функция принимает на входе список транзакций и возвращает итерируемый объект,
+    который может генерировать значения по запросу, выдавая описание транзакций
     """
     for transaction in transactions:
         yield transaction["description"]
