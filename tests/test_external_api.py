@@ -1,8 +1,9 @@
 import os
-from unittest.mock import patch, Mock
-from requests import Response
-from src.external_api import sum_from_transaction
+from unittest.mock import Mock, patch
 
+from requests import Response
+
+from src.external_api import sum_from_transaction
 
 TRANSACTION_RUB = {"operationAmount": {"currency": {"code": "RUB"}, "amount": 100.0}}
 
