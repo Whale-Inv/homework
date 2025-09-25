@@ -13,6 +13,7 @@ black = ">=23.7.0"
 flake8 = ">=6.0.0"
 mypy = ">=1.1.1"
 python-dotenv = "^1.1.1"
+pandas = "^2.3.2"
 
 
 [tool.poetry.group.dev.dependencies]
